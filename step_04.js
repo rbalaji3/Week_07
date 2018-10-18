@@ -13,11 +13,29 @@ const port = 3000
 
 //  Declare a route
 app.get("/", (req, res) => {
+  let page = req.params.pages
+  switch(page) {
+    case "home":
+      res.send("home")
+      break
+    case "about":
+      res.send("about")
+      break
+    case "info":
+      res.send("info")
+      break;
+
+  }
   res.sendFile(__dirname + '/public/index.html')
+  
 })
 
 app.get("/about", (req, res) => {
   res.sendFile(__dirname + "/public/about.html")
+})
+
+app.get("/help", (req, res) => {
+  res.sendFile(__dirname + "/public/help.html")
 })
 
 //  Start Express Web Server i.e. start listing on the port you defined

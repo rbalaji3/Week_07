@@ -17,6 +17,8 @@ const port = 3000
 //  handler function takes req (the request obj) and res (the response obj) as
 //  parameters, the function uses res to generate a response
 app.get('/', (req, res) => res.send('Hello World!'))
+app.get('/', (req, res) => res.send('test'))
+
 
 //  Start Express Web Server i.e. start listing on the port you defined
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
